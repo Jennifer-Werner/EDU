@@ -1,0 +1,589 @@
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* each page sections and their specifications */
+
+/* Main Page */
+
+header {
+    background-color: black;
+    height: 878px;
+}
+
+.Page {
+    /* layout */
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content:center;
+
+
+    /* background */
+        background-color: #000;
+        /* border: 5px solid pink; */
+}
+
+.VerticalPage {
+    height: 900px;
+}
+
+.HorizontalPage {
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+section {
+    padding: 20px;
+}
+
+
+/* big parts of each sectoin */
+
+    /* header */
+
+        nav {
+            /* style */
+            background: #000;
+            border: 1px solid #FF9F0E;
+            
+            /*layout*/
+            height: 70px;
+
+            /* flex properties */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+
+        }
+
+        /* navigation bar elements */
+
+                #EDU {
+                    /* layout */
+
+                    margin-left: 35px;
+                    display: flex;
+                    /* width: 121px; */
+                    height: 46px;
+
+                    /* text */
+                    font-size: 28px;
+                    font-weight: 500;
+                }
+
+                .MenuItems {
+                    /* layout */
+
+                    /* width: 179px; */
+                    height: 33px;
+                    margin: 30px;
+
+                    /* text */
+                    font-size: 15px;
+                    font-weight:400;
+                }
+
+                #Language {
+                    /* layout */
+                    position: relative;
+
+                    /* width: 179px; */
+                    margin-right: 35px;
+                    height: 33px;
+
+                    /* text */
+                    font-size: 20px;
+                    font-weight: 400;
+
+                }
+
+                #Language::after {
+                    content: '';
+                    position: absolute;
+                    left:0;
+                    bottom: -6px;
+                    width: 100%;
+                    height: 2px;
+                    background: white;
+                    border-radius: 5px;
+                    transform: scaleX(0);
+                    transition: transform .5s;
+                }
+
+                #Language:hover {
+                    color:#FFF;
+                }
+
+                #Language:hover::after {
+                    transform: scaleX(1);
+                }
+
+        /* intro section */
+
+            .Wrapper {
+                position:relative;
+                height: 760px;
+                display: grid;
+                grid-template-rows: 33% 33% 33%;
+                padding: 0;
+                }
+            
+            .MainImage {
+                    /* layout */
+                    display: flex;
+                    min-height: 760px;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 1;      
+                
+                    /* background */
+                    opacity: 0.7;
+                    background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 100%), url('https://s3-alpha-sig.figma.com/img/33cf/e055/a3de181007e0fad6f63e60b527475a24?Expires=1704067200&Signature=FPajLZkqxUm2MJ1BmcOUsxf8LxtZnDf-itll5~9cDw-WyWGG8DwymZEmGW60Sb3Wwk9ac4Je7wYjSUyB2geBpj~Vch6iFMRifCULShF2hm1ZObruaf5xfa~XTIAiPhl3shMgNLTa~ltcmT39us5lAh4BIyV4FfhmU9i1S2V6dsl5xFa4D5nJuOQH37Q1q4TV6BFvVLx9b5JqDKngRNGQFnVoVij0Z~30VFrN6qnASLO5fz7pBSGvQ-RxK~viBD1KJbUlNjF52F9o54LmyzC1rXTIETpwUu7PaFYjk3EAFjp5n8HcqprTdKSYvU7IHe~Yb0Ub0r7I-G8Y9HLi7jPSGQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'), lightgray 50% / cover no-repeat;
+                    background-size:cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                }
+            
+            .Education {
+                    /* layout */
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    z-index: 2;
+                    grid-area: 2 / 1 / 3 / -1 ;
+                    margin-left: 25px;
+                    margin-right: 25px;
+            
+                    /* text */
+                    font-size: 96px;
+                    font-weight: 500;
+            
+                    /* style */
+                    color: white;
+                    text-shadow: 0px 4px 4px #000;
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    line-height: normal;
+                    font-style: normal;
+                    }
+                
+        /* who are we */
+
+            .MainPageImg {
+                /* layout */
+                display: flex;
+                width: 35%;
+                height: 80%;
+                background-size:cover;
+                justify-content: center;
+                /* border:#FF9F0E 1px solid; */
+
+                box-shadow: gray 0px 0px 5px;
+
+                
+            }
+
+            .MainPageImg1 {
+                background-image: url(https://www.figma.com/file/Tzu5gnLN9elJsdGz0ups1R/image/82dcfa9e8bc7757295c9ec1ca2e36cfe6a51fddc);
+            }
+
+            .MainPageImg2 {
+                background-image: url(https://s3-alpha-sig.figma.com/img/b5a1/10ea/47fc489e33fe9464d4d316a7baf5d3ce?Expires=1704067200&Signature=qWH~qu-6FjU3s8oj-4dhF2GdOGnDzM0oMl-lWEWPIzZm5-sbzXN-4bavbasGMQO~lSCo~pJuMVsP2VTbzAxrm8aHyhfDwn0lanG17Gk5NFunPkP69Az51IPw50LSUH3UclgsC3Wtekl7yy1rUchd-wMqv5RG2pulkQSATHczRyCBUJee0iWIi7g8OlZ-Yi8yYRgydFfOqNLhvZ3Jsz3lizwzxq7P6XgQynpLtOcbXSI87XwHhIpzeVvmHF6w0hTjbO0OZDKY515dHlWt0rQ~otgzwwDvCs7i2Uhz7cqeQbXHzwTb1KudQ7cFwUadl7sPwOnHk05uKxoLZlpqxQfpiw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
+            }
+
+            .MainPageImg3 {
+                height: 220px;
+                background-image: url(https://s3-alpha-sig.figma.com/img/5809/706a/f93bd7a032f79cb87f3098a9395330a6?Expires=1704067200&Signature=M5tKmFkyaNmrF0cEt275Ody0~XyGQQ8mRp81F63qatgyrrtrStZLbxa7~HMiNfbBVcVAm-eddD-sZf9ITwIvVYyaHzQEbJnE2uBjpxzgdgbxf2kGx6s63kH0MT1OUTwOTByDI5BNDgqZmjyY6TMmHHg8SBy2AGgJUTooAjvljqyp0257YOIzEEnu4GJD9QwzPgseCOV-05kdHv428YgFmwZ5tiw2QX-HdjKh6LossR-NgH1sSFeWtSOvZLQkHVPwFiIjRAj1IAOSnlfbi3xlWd9CRJmW8njFUv5jMsJxHfOuvB3lQNCIb-uxCLWUuCzFxnOmXovT0h4X2kVlJMR4XA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
+                width: 80%;
+                margin-top:20px;
+                margin-bottom:20px;
+            }
+
+            .MainPageImg4 {
+                height: 220px;
+                background-image: url(https://s3-alpha-sig.figma.com/img/7d3f/c4bd/3381fe567b6d3b2e6c5be96cb97e80c6?Expires=1704067200&Signature=qQCqp~iTESBvRlk8igYTCtZBue18xiueNVvJEJVP4OfiycEdSef39R-ogSURlwgZ6GOBbwP4cEnUrKMBKYVCCfqCk~QBIA~vE-oGTnCntm3HozNq~6f64~ig2megLBGnMvI~LYP6YP28-G16Ukv9drjdbKPuBkGKIVLuarSN~HAktrlQl-IlcrvVg3eJrSPMg566OFXYF-7LIO2QjPJyyNBjKRJTOnyJtJxmCALd0ncDTnkRomsD~n068DlHM3FokAOwStMS-M2znAHcF2cAtETXvK6daKCj~tIBwejOMi7nE3J1rkEXBrJRNesG2VYmna87q2sz9PU7PT5WN8C10A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
+                width: 80%;
+                margin-top:20px;
+                margin-bottom:20px;
+            }
+
+            /* we teach through */
+            .StudyBlocks {
+                /* layout */
+                display:flex;
+                width: 100%;
+                flex-wrap:wrap;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            .StudyBlock {
+                display: block;
+                width:220px;
+                height:220px;
+                margin: 15px;
+                border: white 1px solid;
+                transition: .5s;
+            }
+
+            .StudyBlock:hover {
+                color: white;
+                border: white 2px solid;
+            }
+  
+/* Log In Page */
+
+    .LogInImg {
+        /* layout */
+        display: flex;
+        min-height: 800px;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;  
+        margin: 0;
+        padding: 0;
+
+        /* background */
+        background-color: black;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%), url(https://www.figma.com/file/Tzu5gnLN9elJsdGz0ups1R/image/266f96997ef6604e189d79ad8846e2edc6c08225), lightgray 50% / cover no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .loginbox {
+            /* layout */
+            position: relative;
+            width: 450px;
+            height: 500px;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            margin-left: 25px;
+            margin-right: 25px;
+    
+            /* style */
+    
+            /* text */
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: normal;
+            font-style: normal;
+            border: 2px solid rgba(255, 255, 255, .5);
+            border-radius: 30px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    }
+
+    .teacher-or-student {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background: #C3C3C3;
+        border: 1px solid #000;
+        border-radius: 10px;
+        opacity: 0.5;
+        line-height: normal;
+    }
+
+    .teacher-or-student-button {
+        height: 100%;
+    }
+
+    .individual {
+        height: 100%;
+        border: pink 1px solid;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .input-box {
+        /* layout */
+        position: relative;
+        width: 100%;
+        height: 50px;
+        border-bottom: 2px solid gray;
+        margin: 30px 0;
+    }
+
+    .input-box label {
+        /* layout */
+        position: absolute;
+        top: 60%;
+        left: 10px;
+        transform: translateY(-50%);
+        font-size: 1em;
+        pointer-events: none;
+    }
+
+    .input-box input:focus~label, 
+    .input-box input:valid~label {
+        top: -5px;
+        transition: .5s;
+    }
+
+    .input-box input {
+        /* layout */
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border: none;
+        outline: none;
+
+        /* style */
+        color: #C3C3C3;
+        font-size: 15px;
+        padding: 0 35px 0 10px;
+    }
+
+    .input-box .icon {
+        position: absolute;
+        top: 45%;
+        right: 5px;
+    }
+
+    .remember-forgot {
+        /* layout */
+        display: flex;
+        justify-content: space-between;
+        margin: -15px 0 15px;
+
+        /* style */
+        font-size: 12px;
+    }
+
+    .remember-forgot label input {
+        accent-color: #C3C3C3;
+        margin-right: 5px;
+    }
+
+    .remember-forgot a::after{
+        content: '';
+        position: absolute;
+        left:0;
+        bottom: 1px;
+        width: 100%;
+        height: 1px;
+        background: white;
+        border-radius: 5px;
+        transform: scaleX(0);
+        transition: transform .5s;
+    }
+
+    .button {
+        /* layout */
+        width: 100%;
+        height: 45px;
+
+        /* style */
+        background: #000;
+        opacity: 0.7;
+        border-radius: 10px;
+        outline: none;
+        border: #C3C3C3 1px solid;
+        color:white;
+        transition: .5s;
+        cursor: pointer;
+        font-size: 15px;
+
+    }
+
+    .button:hover {
+        border: white 1px solid;
+        box-shadow: 1px 2px 2px 1px gray;
+        font-weight: 600;
+    }
+
+    .login-register {
+        font-size: 12px;
+        text-align: center;
+        margin: 20px 0 10px;
+    }
+
+    .login-register p a {
+        font-weight: 600;
+    }
+
+    .login-register a::after {
+            content: '';
+            position: absolute;
+            left:0;
+            bottom: -2px;
+            width: 100%;
+            height: 1px;
+            background: white;
+            border-radius: 5px;
+            transform: scaleX(0);
+            transition: transform .5s;
+    }
+    
+
+/* general styling */
+
+    /* text */
+
+        .regularText {
+        /* layout */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    
+        /* style */
+        color: #C3C3C3;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        line-height: normal;
+        font-style: normal;
+        }
+
+        .regularText .GreyHeading {
+
+            /* layout */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 5%;
+
+            /* style */
+            color: #8f8f8f;
+            font-size: 20px;
+            font-weight:400;
+        }
+
+        .regularText .GreyHeading .WeTeachThrough {
+            color: white;
+            margin: 20px;
+            font-size: 20px;
+            font-weight:400;
+        }
+
+        .regularText .regularParagraph {
+            /* layout */
+            display: flex;
+            height: 180px;
+            max-width: 300px;
+            align-items: center;
+            text-align: center;
+            /* margin-left: 200px;
+            margin-right:200px; */
+
+            /* style */
+            color: white;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        .regularText .Button {
+            /* layout */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 300px;
+            height: 60px;
+            padding-right:20px;
+            padding-left:20px;
+            transition: .5s;
+
+            /* style */
+            color: #C3C3C3;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 400;
+            border: 1px solid #C3C3C3;
+        }
+
+        .regularText .Button:hover {
+            color: white;
+            border: 1px solid white;
+        }
+
+        .regularText .SubjectButton {
+            min-width: 200px;
+        }
+
+        .regularText .LogInText {
+            /* layout */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            /* style */
+            text-align: center;
+            font-size: 32px;
+        }
+
+    /* link */
+
+        a {
+            position: relative;
+            text-decoration: none;
+            color: #C3C3C3;
+        }
+
+        a::after {
+            content: '';
+            position: absolute;
+            left:0;
+            bottom: -6px;
+            width: 100%;
+            height: 2px;
+            background: white;
+            border-radius: 5px;
+            transform: scaleX(0);
+            transition: transform .5s;
+        }
+
+        a:hover {
+            color:#FFF;
+        }
+
+        a:hover::after {
+            transform: scaleX(1);
+        }
+
+    /* list */
+
+        ul {
+            /* layout */
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+    /* paragraphs */
+
+        .MainPageBlock {
+            /* layout */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin:10px;
+            width:40%;
+            height:40%;
+            /* border: pink 1px solid; */
+        }
+
+        .MainPageCourse {
+        /* layout */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin:10px;
+        width: 400px;
+        /* border: pink 1px solid; */
+        }
